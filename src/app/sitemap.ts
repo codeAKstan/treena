@@ -154,20 +154,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const allBooksRaw = await db
-    .select({ slug: baseBook.slug, updatedAt: baseBook.updatedAt })
-    .from(baseBook)
-    .innerJoin(
-      bookVariant,
-      and(
-        eq(bookVariant.baseBookId, baseBook.id),
-        eq(bookVariant.isListed, true)
-      )
-    );
-
-  const uniqueBooks = Array.from(
-    new Map(allBooksRaw.map((book) => [book.slug, book])).values()
-  );
+  const uniqueBooks = process.env.DATABASE_URL ? Array.from(
+    new Map((await db
+      .select({ slug: baseBook.slug, updatedAt: baseBook.updatedAt })
+      .from(baseBook)
+      .innerJoin(
+        bookVariant,
+        and(
+          eq(bookVariant.baseBookId, baseBook.id),
+          eq(bookVariant.isListed, true)
+        )
+      )).map((book) => [book.slug, book])).values()
+  ) : [];
 
   const bookRoutes: MetadataRoute.Sitemap = uniqueBooks.map((book) => ({
     url: `${baseUrl}/shop/books/${book.slug}`,
@@ -176,20 +174,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  const allMerchRaw = await db
-    .select({ slug: baseMerch.slug, updatedAt: baseMerch.updatedAt })
-    .from(baseMerch)
-    .innerJoin(
-      merchVariant,
-      and(
-        eq(merchVariant.baseMerchId, baseMerch.id),
-        eq(merchVariant.isListed, true)
-      )
-    );
-
-  const uniqueMerch = Array.from(
-    new Map(allMerchRaw.map((item) => [item.slug, item])).values()
-  );
+  const uniqueMerch = process.env.DATABASE_URL ? Array.from(
+    new Map((await db
+      .select({ slug: baseMerch.slug, updatedAt: baseMerch.updatedAt })
+      .from(baseMerch)
+      .innerJoin(
+        merchVariant,
+        and(
+          eq(merchVariant.baseMerchId, baseMerch.id),
+          eq(merchVariant.isListed, true)
+        )
+      )).map((item) => [item.slug, item])).values()
+  ) : [];
 
   const merchRoutes: MetadataRoute.Sitemap = uniqueMerch.map((item) => ({
     url: `${baseUrl}/shop/merch/${item.slug}`,

@@ -14,6 +14,7 @@ export type PublicTestimonial = {
 };
 
 export async function getApprovedTestimonials(): Promise<PublicTestimonial[]> {
+  if (!process.env.DATABASE_URL) return [];
   const rows = await db
     .select()
     .from(testimonials)

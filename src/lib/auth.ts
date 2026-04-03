@@ -8,6 +8,7 @@ import { sendWelcomeEmail } from "@/mailer/handlers/auth/welcome";
 import { notifyAdminNewSignup } from "@/mailer/handlers/auth/new-signup";
 
 export const auth = betterAuth({
+  secret: process.env.BETTER_AUTH_SECRET || "fallback_secret_for_build_purposes_only",
   database: drizzleAdapter(db, {
     provider: "pg",
   }),

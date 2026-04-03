@@ -6,6 +6,7 @@ import { eq, and } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
 export async function getNgoContent() {
+  if (!process.env.DATABASE_URL) return {};
   try {
     const content = await db.select().from(ngoContent);
 
@@ -26,6 +27,7 @@ export async function getNgoContent() {
 }
 
 export async function getNgoSection(section: string) {
+  if (!process.env.DATABASE_URL) return {};
   try {
     const content = await db
       .select()

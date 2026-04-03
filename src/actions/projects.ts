@@ -7,6 +7,7 @@ import { nanoid } from "nanoid";
 import { revalidatePath } from "next/cache";
 
 export const getPublicProjects = async () => {
+  if (!process.env.DATABASE_URL) return [];
   const allProjects = await db
     .select()
     .from(projects)
@@ -16,6 +17,7 @@ export const getPublicProjects = async () => {
 };
 
 export const getPublicProjectById = async (id: string) => {
+  if (!process.env.DATABASE_URL) return null;
   const project = await db.select().from(projects).where(eq(projects.id, id));
 
   if (project.length === 0) {

@@ -20,6 +20,7 @@ import {
 type BlogCategory = (typeof blogCategories)[number];
 
 export async function getPublishedBlogPosts(category?: string) {
+  if (!process.env.DATABASE_URL) return [];
   if (category && blogCategories.includes(category as BlogCategory)) {
     const posts = await db
       .select({

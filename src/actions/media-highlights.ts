@@ -5,6 +5,7 @@ import { mediaHighlights } from "@/db/schema/media-highlights";
 import { eq, desc } from "drizzle-orm";
 
 export const getMediaHighlights = async () => {
+  if (!process.env.DATABASE_URL) return { success: true, data: [] };
   try {
     const highlights = await db
       .select()
