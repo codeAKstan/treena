@@ -43,23 +43,16 @@ const ContactPage = async () => {
     {
       icon: Mail,
       label: "Email",
-      value: contactInfo.email?.value,
-      link: contactInfo.email?.value
-        ? `mailto:${contactInfo.email.value}`
-        : null,
+      value: "treena@bellainfinita.com",
+      link: "mailto:treena@bellainfinita.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: contactInfo.phone?.value,
-      link: contactInfo.phone?.value ? `tel:${contactInfo.phone.value}` : null,
+      value: "(720) 990-7246",
+      link: "tel:(720) 990-7246",
     },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: contactInfo.address?.value,
-      link: null,
-    },
+   
   ];
 
   return (
@@ -234,35 +227,7 @@ const ContactPage = async () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2
-              className={`text-3xl lg:text-4xl font-bold text-gray-900 mb-6 ${oswald.className}`}
-            >
-              Ready to Work Together?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              If you&apos;re interested in my services, check out my booking
-              pages for coaching, consulting, or ghostwriting services.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="/services/coaching/booking">Book Coaching Session</a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="/services/consulting/booking">Schedule Consultation</a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="/services/ghostwriting/booking">
-                  Discuss Writing Project
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 };

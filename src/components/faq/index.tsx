@@ -14,7 +14,7 @@ const oswald = Oswald({
 const faqData = [
   {
     id: 1,
-    question: "Who is Thywill Uche?",
+    question: "Who is Treena Reynolds?",
     answer:
       "Writer, poet, ghostwriter, and life coach helping others find strength and purpose.",
   },

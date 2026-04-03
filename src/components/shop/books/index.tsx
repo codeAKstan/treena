@@ -5,12 +5,7 @@ import Link from "next/link";
 import { Oswald } from "next/font/google";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useQuery } from "@tanstack/react-query";
 import { Star } from "lucide-react";
-import {
-  getPublicBooksWithVariants,
-  getPublicFeaturedBooks,
-} from "@/actions/shop/books/public";
 import { FeaturedCarousel } from "./featured-carousel";
 import AddToCart from "@/components/cart-button";
 import { georgiaItalic } from "@/utils/georgia-italic";
@@ -44,24 +39,72 @@ const BookSkeleton = () => (
   </div>
 );
 
-const BooksPage = () => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["public-books"],
-    queryFn: () => getPublicBooksWithVariants(1, 10),
-  });
+const hardcodedBooks = [
+  {
+    id: "1",
+    tittle: "Ticklish clouds",
+    synopsis: "A story of courage and imagination that inspires the reader to explore their own creative path.",
+    badge: "Bestseller",
+    reviewStats: {
+      count: 120,
+      averageRating: 4.8,
+    },
+    tags: ["Inspiration", "Adventure"],
+    slug: "the-magical-journey",
+    variants: [
+      {
+        id: "v1",
+        variant: "Paperback",
+        status: "Available",
+        price: "14.99",
+        imageUrl: "/images/book1.png",
+      },
+      {
+        id: "v2",
+        variant: "Hardcover",
+        status: "Available",
+        price: "24.99",
+        imageUrl: "/images/book1.png",
+      },
+    ],
+  },
+  {
+    id: "2",
+    tittle: "Whispers of Hope",
+    synopsis: "A moving memoir exploring resilience, love, and the power of words to heal.",
+    badge: "New",
+    reviewStats: {
+      count: 78,
+      averageRating: 4.6,
+    },
+    tags: ["Memoir", "Healing"],
+    slug: "whispers-of-hope",
+    variants: [
+      {
+        id: "v3",
+        variant: "Paperback",
+        status: "Available",
+        price: "12.99",
+        imageUrl: "/images/book2.png",
+      },
+      {
+        id: "v4",
+        variant: "Ebook",
+        status: "Available",
+        price: "6.99",
+        imageUrl: "/images/book2.png",
+      },
+    ],
+  },
+];
 
-  const { data: featuredData } = useQuery({
-    queryKey: ["public-featured-books"],
-    queryFn: () => getPublicFeaturedBooks(),
-  });
+const BooksPage = () => {
+  const data = { books: hardcodedBooks };
+  const featuredData = { books: hardcodedBooks.slice(0, 2) };
 
   return (
     <div className="container mx-auto px-4 py-10 space-y-10">
-      {featuredData?.books && featuredData.books.length > 0 && (
-        <div id="featured-books" className="space-y-6">
-          <FeaturedCarousel books={featuredData.books} />
-        </div>
-      )}
+      
       <div className="container mx-auto max-w-7xl px-2 md:px-5 lg:px-10 bg-white py-10 rounded-lg">
         <h1
           className={`text-3xl lg:text-4xl xl:text-5xl ${georgiaItalic.className} font-bold text-gray-900 mb-2`}
@@ -72,19 +115,7 @@ const BooksPage = () => {
           Discover our collection of inspiring books
         </p>
 
-        {isLoading ? (
-          <div className="space-y-10">
-            <BookSkeleton />
-            <Separator />
-            <BookSkeleton />
-          </div>
-        ) : error ? (
-          <div className="text-center py-10">
-            <p className="text-red-500">
-              Error loading books. Please try again.
-            </p>
-          </div>
-        ) : !data?.books || data.books.length === 0 ? (
+        {!data?.books || data.books.length === 0 ? (
           <div className="text-center py-20">
             <p className="text-xl text-muted-foreground">
               No books available at the moment

@@ -53,10 +53,10 @@ export function Navbar() {
           <Image
             src="/logos/LogoF.png"
             alt="logo"
-            width={150}
-            height={50}
+            width={200}
+            height={100}
             className={isNGOPage ? "w-auto h-30" : "w-auto h-20"}
-            onClick={() => router.push(isNGOPage ? "/ngo" : "/")}
+            onClick={() => router.push("/")}
           />
           <div className="flex items-center gap-2">
             <Cart Icon={ShoppingBag} variant="ghost" />
@@ -77,10 +77,10 @@ export function Navbar() {
           <Image
             src="/logos/LogoF.png"
             alt="logo"
-            width={150}
-            height={50}
+            width={200}
+            height={100}
             className={isNGOPage ? "w-auto h-30" : "w-auto h-20"}
-            onClick={() => router.push(isNGOPage ? "/ngo" : "/")}
+            onClick={() => router.push("/")}
           />
           <NavigationMenu viewport={false} className="relative z-[999]">
             <NavigationMenuList>
@@ -190,133 +190,15 @@ function MobileNavContent({ onClose }: { onClose: () => void }) {
           Shop
         </Link>
 
-        <div className="h-px bg-border my-2" />
 
-        {/* Services */}
-        <Collapsible open={servicesOpen} onOpenChange={setServicesOpen}>
-          <CollapsibleTrigger
-            className={`w-full flex items-center justify-between text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          >
-            Services
-            <ChevronDown
-              className={`h-5 w-5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""
-                }`}
-            />
-          </CollapsibleTrigger>
-          <CollapsibleContent className="mt-1 mb-2 space-y-1 bg-muted/30 rounded-lg py-2">
-            <Link
-              href="/services/coaching"
-              className="block pl-8 pr-4 py-2.5 text-base text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md mx-2 transition-all"
-              onClick={onClose}
-            >
-              Coaching
-            </Link>
-            <Link
-              href="/services/ghostwriting"
-              className="block pl-8 pr-4 py-2.5 text-base text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md mx-2 transition-all"
-              onClick={onClose}
-            >
-              Ghostwriting
-            </Link>
-            <Link
-              href="/services/consulting"
-              className="block pl-8 pr-4 py-2.5 text-base text-muted-foreground hover:bg-accent/50 hover:text-foreground rounded-md mx-2 transition-all"
-              onClick={onClose}
-            >
-              Consulting
-            </Link>
-          </CollapsibleContent>
-        </Collapsible>
+       
+       
 
-        <div className="h-px bg-border my-2" />
+      
 
-        {/* NGO */}
-        <Link
-          href="/ngo"
-          className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          onClick={onClose}
-        >
-          NGO
-        </Link>
+        
 
-        <div className="h-px bg-border my-2" />
-
-        {/* Community */}
-        <Link
-          href="/community"
-          className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          onClick={onClose}
-        >
-          Community
-        </Link>
-
-        <div className="h-px bg-border my-2" />
-
-        {/* Projects */}
-        <Link
-          href="/portfolio"
-          className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          onClick={onClose}
-        >
-          Projects
-        </Link>
-
-        <div className="h-px bg-border my-2" />
-
-        {/* Blog */}
-        {/* <Link
-          href="/blog"
-          className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          onClick={onClose}
-        >
-          Blog
-        </Link> */}
-
-        <div className="h-px bg-border my-2" />
-
-        {/* FAQ */}
-        <Link
-          href="/faq"
-          className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          onClick={onClose}
-        >
-          FAQ
-        </Link>
-
-        <div className="h-px bg-border my-2" />
-
-        {/* Contact Me */}
-        <Link
-          href="/contact"
-          className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          onClick={onClose}
-        >
-          Contact Me
-        </Link>
-
-        <div className="h-px bg-border my-2" />
-
-        {/* Privacy Policy */}
-        <Link
-          href="/privacy"
-          className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          onClick={onClose}
-        >
-          Privacy Policy
-        </Link>
-
-        <div className="h-px bg-border my-2" />
-
-        {/* Testimonials */}
-        <Link
-          href="/testimonials"
-          className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
-          onClick={onClose}
-        >
-          Testimonials
-        </Link>
-
-        <div className="h-px bg-border my-2" />
+        
       </nav>
     </SheetContent>
   );

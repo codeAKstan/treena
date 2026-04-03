@@ -124,12 +124,7 @@ const CartPage = () => {
                   Books
                 </Link>
               </Button>
-              <Button variant="outline" asChild className="flex-1">
-                <Link href="/shop/merch" className="gap-2">
-                  <ArrowLeft className="w-4 h-4" />
-                  Merch
-                </Link>
-              </Button>
+              
             </div>
           </div>
 
@@ -281,9 +276,7 @@ const CartPage = () => {
                     <Button variant="outline" asChild className="flex-1">
                       <Link href="/shop/books">Books</Link>
                     </Button>
-                    <Button variant="outline" asChild className="flex-1">
-                      <Link href="/shop/merch">Merch</Link>
-                    </Button>
+                    
                   </div>
                 </div>
 

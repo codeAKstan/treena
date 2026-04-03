@@ -15,7 +15,7 @@ const oswald = Oswald({
 
 export async function generateMetadata(): Promise<Metadata> {
   const content = await getServiceSection("overview");
-  const title = content.title || "Services | Thywill Uche";
+  const title = content.title || "Services | Treena Reynolds";
   const description =
     content.subtitle ||
     "Transform your vision into reality with personalized guidance, expert consulting, and professional writing services tailored to your unique journey.";
@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "life coaching",
       "personal development",
       "mental wellness",
-      "Thywill Uche services",
+      "Treena Reynolds services",
       "professional writing",
       "book writing",
       "content strategy",
@@ -40,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       url: "https://thywilluche.com/services",
-      siteName: "Thywill Uche",
+      siteName: "Treena Reynolds",
       locale: "en_US",
       type: "website",
       images: [
@@ -48,7 +48,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: "https://thywilluche.com/images/main.jpg",
           width: 1200,
           height: 630,
-          alt: "Thywill Uche Services",
+          alt: "Treena Reynolds Services",
         },
       ],
     },

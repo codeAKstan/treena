@@ -39,21 +39,17 @@ interface AboutProps {
 }
 
 const About = ({
-  whoIAmImage = "/images/IMG_20240828_162619[1].jpg",
+  whoIAmImage = "/images/treena.jpg",
   whoIAmTitle = "Who I Am",
-  whoIAmParagraph1 = "I am Thywill Uche — a writer, poet, founder, ghostwriter, and life coach.",
-  whoIAmParagraph2 = "A voice of resilience and transformation, devoted to helping others find strength in their stories.",
-  whoIAmParagraph3 = "I stand at the intersection of art and healing — using words to mend hearts, awaken purpose, and empower individuals to rise beyond their pain and struggle.",
-  whoIAmParagraph4 = "My life and my book, Days I Do Not Die, embody survival, spiritual strength, and rebirth. I am more than an author — I am a movement. A living testament that healing is possible, that creativity is sacred, and that authenticity is power. Through my work, I guide others to evolve through their struggles — not by concealing their scars, but by transforming them into stories that inspire hope, courage, and the will to keep rising. I remind the world that every day we live is another day we do not die.",
-  journeyImage = "/images/IMG_20240828_162619[1].jpg",
+  whoIAmParagraph1 = "Treena E. Reynolds is a professional coach and author who blends important lessons with real-life advice,",
+  whoIAmParagraph2 = "aiming to help people grow. Her work speaks to everyday challenges and small wins.",
+  whoIAmParagraph3 = "Treena began by capturing moments through the lens of her camera. Later, her work as a transformation energy coach gave her a deeper understanding of how thoughts and stories shape the way people see themselves.",
+  whoIAmParagraph4 = "With strong academic training and years of experience, she has helped many find clarity and confidence. Now she brings that same vision to children’s books, blending sharp detail with warmth, humor, and heart.",
+  journeyImage = "/images/treena.jpg",
   journeyTitle = "My Journey",
-  journeyParagraph1 = "From the depths of personal struggle to becoming a beacon of hope for thousands, my journey has been one of transformation, resilience, and unwavering commitment to living authentically.",
-  journeyParagraph2 = "Growing up, I faced challenges that tested my spirit and questioned my path. Mental health struggles, moments of doubt, and the weight of unexpressed emotions shaped me into someone who understands the power of vulnerability and the strength found in community.",
-  purposeTitle = "The Purpose Behind This Platform",
-  purposeParagraph1 = "This platform was born from a simple truth — that healing begins when we give our pain a voice and our stories a place to belong.",
-  purposeParagraph2 = "Days I Do Not Die was the first spark — a raw, unfiltered reflection of survival, faith, and the human spirit's ability to rise again.",
-  purposeParagraph3 = "But it didn't end with the book. It evolved into something greater — a movement. A creative and wellness space built to remind people that strength is not the absence of struggle, but the courage to keep showing up. Through storytelling, poetry, and community, we seek to bridge the gap between art and healing — creating a space where authenticity is celebrated, vulnerability is power, and every voice has the right to be heard.",
-  missionTitle = "Our Mission",
+  journeyParagraph1 = "Treena’s journey into children’s literature started with photography. She learned to capture moments and reveal what others might overlook. That ability now shapes her writing. Rather than using heavy narration, she creates scenes that children can enter with ease.",
+  journeyParagraph2 = "Treena sees children’s books as more than entertainment. They nurture imagination, creativity, and a love of reading. Her stories rely on clear language and vivid imagery so children can follow along while still feeling surprised. Inspiration doesn’t require complex words. ",
+ missionTitle = "Our Mission",
   missionParagraph1 = "To empower individuals worldwide to embrace their mental health journey with courage, compassion, and community. We believe that every person deserves to live authentically, heal from their past, and find strength in their daily victories.",
   missionParagraph2 = "Through storytelling, education, and meaningful connections, we create safe spaces where vulnerability becomes strength and isolation transforms into belonging.",
   visionTitle = "Our Vision",
@@ -100,7 +96,7 @@ const About = ({
                 <div className="relative">
                   <Image
                     src={whoIAmImage}
-                    alt="Thywill Uche - Who I Am"
+                    alt="Treena Reynolds - Who I Am"
                     width={400}
                     height={450}
                     className="rounded-3xl shadow-2xl object-cover w-full aspect-[4/5]"
@@ -203,7 +199,7 @@ const About = ({
                 <div className="relative">
                   <Image
                     src={journeyImage}
-                    alt="Thywill Uche - Personal Journey"
+                    alt="Treena Reynolds - Personal Journey"
                     width={400}
                     height={450}
                     className="rounded-3xl shadow-2xl object-cover w-full aspect-[4/5]"
@@ -235,7 +231,7 @@ const About = ({
               <h2
                 className={`text-4xl lg:text-5xl ${georgiaItalic.className} mb-8`}
               >
-                {purposeTitle}
+                {/* {purposeTitle} */}
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-12"></div>
             </motion.div>
@@ -247,101 +243,13 @@ const About = ({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <p className="text-justify">{purposeParagraph1}</p>
+              {/* <p className="text-justify">{purposeParagraph1}</p>
               <p className="text-justify">{purposeParagraph2}</p>
-              <p className="text-justify">{purposeParagraph3}</p>
+              <p className="text-justify">{purposeParagraph3}</p> */}
             </motion.div>
           </div>
         </div>
       </motion.section>
-
-      {/* Mission & Vision Section */}
-      <motion.section
-        className="w-full py-20 lg:py-24 bg-white/50"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2
-                className={`text-5xl lg:text-6xl ${georgiaItalic.className} mb-6`}
-              >
-                Mission & Vision
-              </h2>
-              <p
-                className={`text-xl text-gray-700 max-w-3xl mx-auto ${oswald.className}`}
-              >
-                Guiding principles that drive my work and shape the impact I
-                hope to create
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-              {/* Mission */}
-              <motion.div
-                className="group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                id="mission"
-              >
-                <div className="transition-all duration-300 h-full">
-                  <h3
-                    className={`text-3xl font-semibold mb-6 ${oswald.className}`}
-                  >
-                    {missionTitle}
-                  </h3>
-                  <p
-                    className={`text-lg leading-relaxed text-gray-700 ${oswald.className} text-justify`}
-                  >
-                    {missionParagraph1}
-                  </p>
-                  <p
-                    className={`text-lg leading-relaxed text-gray-700 mt-4 ${oswald.className} text-justify`}
-                  >
-                    {missionParagraph2}
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Vision */}
-              <motion.div
-                className="group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                id="vision"
-              >
-                <div className="duration-300 h-full">
-                  <h3
-                    className={`text-3xl font-semibold mb-6 ${oswald.className}`}
-                  >
-                    {visionTitle}
-                  </h3>
-                  <p
-                    className={`text-lg leading-relaxed text-gray-700 ${oswald.className} text-justify`}
-                  >
-                    {visionParagraph1}
-                  </p>
-                  <p
-                    className={`text-lg leading-relaxed text-gray-700 mt-4 ${oswald.className} text-justify`}
-                  >
-                    {visionParagraph2}
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Media Gallery Section */}
-      <MediaGallery mediaHighlights={mediaHighlights} />
 
       <Community />
     </div>

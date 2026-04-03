@@ -4,16 +4,16 @@ import { Metadata } from "next";
 import CheckoutPage from "@/components/shop/checkout";
 
 export const metadata: Metadata = {
-  title: "Shop Checkout | Thywill Uche",
+  title: "Shop Checkout | Treena Reynolds",
   description: "Checkout your order",
   openGraph: {
-    title: "Shop Checkout | Thywill Uche",
+    title: "Shop Checkout | Treena Reynolds",
     description: "Checkout your order",
     images: "/images/IMG_20250907_010336[1].jpg",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shop Checkout | Thywill Uche",
+    title: "Shop Checkout | Treena Reynolds",
     description: "Checkout your order",
     images: "/images/IMG_20250907_010336[1].jpg",
   },

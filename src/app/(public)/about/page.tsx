@@ -8,11 +8,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const whoIAmData = content.whoIAm || {};
   const purposeData = content.purpose || {};
 
-  const title = "About | Thywill Uche";
+  const title = "About Treenreynolds";
   const description =
     whoIAmData.paragraph1 ||
     purposeData.paragraph1 ||
-    "Learn about Thywill Uche - writer, poet, founder, ghostwriter, and life coach. Discover the journey, mission, and vision behind Days I Do Not Die.";
+    "Learn about Treena Reynolds - writer, poet, founder, ghostwriter, and life coach. Discover the journey, mission, and vision behind Days I Do Not Die.";
 
   const whoIAmImage = whoIAmData.image
     ? whoIAmData.image.startsWith("http")
@@ -24,8 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     keywords: [
-      "Thywill Uche",
-      "about Thywill Uche",
+      "Treena Reynolds",
+      "about Treena Reynolds",
       "author biography",
       "writer",
       "poet",
@@ -37,12 +37,12 @@ export async function generateMetadata(): Promise<Metadata> {
       "mission",
       "vision",
     ],
-    authors: [{ name: "Thywill Uche", url: "https://thywilluche.com" }],
+    authors: [{ name: "Treena Reynolds", url: "https://thywilluche.com" }],
     openGraph: {
       title,
       description,
       url: "https://thywilluche.com/about",
-      siteName: "Thywill Uche",
+      siteName: "Treena Reynolds",
       locale: "en_US",
       type: "profile",
       images: [
@@ -50,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: whoIAmImage,
           width: 1200,
           height: 630,
-          alt: "Thywill Uche",
+          alt: "Treena Reynolds",
         },
       ],
     },

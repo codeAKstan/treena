@@ -5,10 +5,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Books",
   description:
-    "Browse our collection of inspirational and motivational books by Thywill Uche. Transform your life with powerful stories, insights, and wisdom.",
+    "Browse our collection of inspirational and motivational books by Treena Reynolds. Transform your life with powerful stories, insights, and wisdom.",
   keywords: [
     "books",
-    "Thywill Uche books",
+    "Treena Reynolds books",
     "inspirational books",
     "motivational books",
     "self-help books",
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     "author books",
   ],
   openGraph: {
-    title: "Books | Thywill Uche",
+    title: "Books | Treena Reynolds",
     description:
-      "Browse our collection of inspirational and motivational books by Thywill Uche. Transform your life with powerful stories, insights, and wisdom.",
+      "Browse our collection of inspirational and motivational books by Treena Reynolds. Transform your life with powerful stories, insights, and wisdom.",
     url: "https://thywilluche.com/shop/books",
-    siteName: "Thywill Uche",
+    siteName: "Treena Reynolds",
     locale: "en_US",
     type: "website",
     images: [
@@ -29,15 +29,15 @@ export const metadata: Metadata = {
         url: "https://thywilluche.com/images/main.jpg",
         width: 1200,
         height: 630,
-        alt: "Thywill Uche Books",
+        alt: "Treena Reynolds Books",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Books | Thywill Uche",
+    title: "Books | Treena Reynolds",
     description:
-      "Browse our collection of inspirational and motivational books by Thywill Uche.",
+      "Browse our collection of inspirational and motivational books by Treena Reynolds.",
     images: ["https://thywilluche.com/images/main.jpg"],
   },
   alternates: {

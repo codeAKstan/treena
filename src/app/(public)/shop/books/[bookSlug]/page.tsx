@@ -28,7 +28,7 @@ export async function generateMetadata({
   const title = book.tittle;
   const description =
     book.synopsis ||
-    `Discover ${book.tittle} by Thywill Uche. An inspiring book that will transform your life.`;
+    `Discover ${book.tittle} by Treena Reynolds. An inspiring book that will transform your life.`;
   const url = `https://thywilluche.com/shop/books/${book.slug}`;
   const releaseDate = book.releaseDate
     ? new Date(book.releaseDate).toISOString()
@@ -40,21 +40,21 @@ export async function generateMetadata({
     keywords: [
       ...(book.tags || []),
       book.tittle,
-      "Thywill Uche",
+      "Treena Reynolds",
       "book",
       "books",
       "inspirational",
       "motivational",
       "self-help",
       "personal development",
-      `Buy ${book.tittle} by Thywill Uche`,
+      `Buy ${book.tittle} by Treena Reynolds`,
     ],
-    authors: [{ name: "Thywill Uche", url: "https://thywilluche.com" }],
+    authors: [{ name: "Treena Reynolds", url: "https://thywilluche.com" }],
     openGraph: {
       title,
       description,
       url,
-      siteName: "Thywill Uche",
+      siteName: "Treena Reynolds",
       locale: "en_US",
       type: "book",
       images: [
@@ -78,7 +78,7 @@ export async function generateMetadata({
       canonical: url,
     },
     other: {
-      "book:author": "Thywill Uche",
+      "book:author": "Treena Reynolds",
       "book:release_date": releaseDate || "",
       ...(book.tags && book.tags.length > 0
         ? {

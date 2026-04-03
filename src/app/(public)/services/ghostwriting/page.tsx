@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const content = await getServiceSection("ghostwriting");
-  const title = content.title || "Ghostwriting Services | Thywill Uche";
+  const title = content.title || "Ghostwriting Services | Treena Reynolds";
   const description =
     content.description ||
     "Bring your story to life with professional ghostwriting services. Whether it's a memoir, self-help book, or personal project, I'll help you craft compelling narratives that resonate with your audience.";
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "self-help books",
       "professional writing",
       "book ghostwriter",
-      "Thywill Uche ghostwriting",
+      "Treena Reynolds ghostwriting",
       "manuscript development",
       "book editing",
       "content writing",

@@ -28,7 +28,7 @@ export async function generateMetadata({
   const title = merch.name;
   const description =
     merch.description ||
-    `Discover ${merch.name} by Thywill Uche. Exclusive merchandise featuring unique designs inspired by our creative works.`;
+    `Discover ${merch.name} by Treena Reynolds. Exclusive merchandise featuring unique designs inspired by our creative works.`;
   const url = `https://thywilluche.com/shop/merch/${merch.slug}`;
 
   return {
@@ -37,7 +37,7 @@ export async function generateMetadata({
     keywords: [
       ...(merch.tags || []),
       merch.name,
-      "Thywill Uche",
+      "Treena Reynolds",
       "merchandise",
       "apparel",
       "accessories",
@@ -47,7 +47,7 @@ export async function generateMetadata({
       title,
       description,
       url,
-      siteName: "Thywill Uche",
+      siteName: "Treena Reynolds",
       locale: "en_US",
       type: "website",
       images: [
@@ -70,7 +70,7 @@ export async function generateMetadata({
       canonical: url,
     },
     other: {
-      "product:brand": "Thywill Uche",
+      "product:brand": "Treena Reynolds",
       ...(merch.tags && merch.tags.length > 0
         ? {
             "product:tag": merch.tags.join(", "),
