@@ -183,7 +183,7 @@ function MobileNavContent({ onClose }: { onClose: () => void }) {
 
         {/* Shop */}
         <Link
-          href="/shop"
+          href="/shop/books"
           className={`text-lg font-semibold px-4 py-3 rounded-lg hover:bg-accent hover:text-accent-foreground active:bg-accent/80 transition-all ${oswald.className} text-[#800000]`}
           onClick={onClose}
         >
@@ -191,14 +191,14 @@ function MobileNavContent({ onClose }: { onClose: () => void }) {
         </Link>
 
 
-       
-       
 
-      
 
-        
 
-        
+
+
+
+
+
       </nav>
     </SheetContent>
   );
