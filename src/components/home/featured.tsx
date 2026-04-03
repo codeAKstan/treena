@@ -30,11 +30,11 @@ interface FeaturedProps {
 }
 
 const Featured = ({
-  title = "Latest Addition",
-  quote = "SOME BATTLES ARE INVISIBLE. SOME SCARS ARE BURIED DEEP. BUT SURVIVAL ITSELF IS THE LOUDEST TESTIMONY.",
-  description = "In Days I Do Not Die, Thywill Uche opens the door to his most vulnerable truths-sharing a raw, unfiltered journey through struggle, survival, and the silent weight of mental illness. This is not just a story of pain; it is a story of recovery, rebirth, and the relentless will to live when life itself feels unbearable.",
-  image1 = "/images/IMG_20250918_104735[2].jpg",
-  image2 = "/images/IMG_20250716_093443[1].jpg",
+  title = "Latest Book Insight",
+  quote = "Ticklish Cloud \n A Story That Floats With Joy .",
+  description = "Treena E. Reynolds’ debut, Ticklish Cloud, illustrated by Karissa Feese, is a playful book designed for ages 3–7. It delivers a mix of humor and rhythm that makes it perfect for bedtime, group reading, or solo exploration by early readers. The story introduces a cloud with a ticklish secret. As the laughter builds, children follow along with simple, engaging lines that are easy to read aloud. Bright artwork amplifies the humor, giving the story a bounce that feels alive.",
+  image1 = "/images/book1.png",
+  image2 = "/images/book2.png",
   reviews = [],
 }: FeaturedProps) => {
   return (

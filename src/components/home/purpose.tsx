@@ -15,10 +15,10 @@ interface PurposeProps {
 }
 
 export default function Purpose({
-  title = "The Purpose Behind This Platform",
-  paragraph1 = "This platform was born from a simple truth — that healing begins when we give our pain a voice and our stories a place to belong.",
-  paragraph2 = "Days I Do Not Die was the first spark — a raw, unfiltered reflection of survival, faith, and the human spirit's ability to rise again.",
-  paragraph3 = "But it didn't end with the book. It evolved into something greater — a movement. A creative and wellness space built to remind people that strength is not the absence of struggle, but the courage to keep showing up. Through storytelling, poetry, and community, we seek to bridge the gap between art and healing — creating a space where authenticity is celebrated, vulnerability is power, and every voice has the right to be heard.",
+  title = "The Purpose of Ticklish Cloud",
+  paragraph1 = "It delivers a mix of humor and rhythm that makes it perfect for bedtime, group reading, or solo exploration by early readers. The story introduces a cloud with a ticklish secret. As the laughter builds, children follow along with simple, engaging lines that are easy to read aloud. Bright artwork amplifies the humor, giving the story a bounce that feels alive.",
+  paragraph2 = "Why Parents and Teachers Choose Ticklish Cloud?",
+  paragraph3 = "The story is fun, but it also works as a learning tool. Short text supports early reading skills. Illustrations guide comprehension. Humor keeps attention locked in. It’s a storybook that works as both entertainment and early literacy support.",
 }: PurposeProps) {
   return (
     <motion.section

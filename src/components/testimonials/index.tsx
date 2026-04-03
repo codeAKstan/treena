@@ -20,8 +20,29 @@ type Testimonial = {
   work?: string | null;
 };
 
+const hardcodedTestimonials: Testimonial[] = [
+  {
+    id: "hannah-collins",
+    name: "Hannah Collins",
+    quote:
+      "This feels like the kind of book I would have loved as a child. Simple story, gentle message, nothing complicated. Just makes you smile.",
+    rating: 5,
+    location: "",
+  },
+  {
+    id: "daniel-perez",
+    name: "Daniel Perez",
+    quote:
+      "I read this to my son before bedtime. He kept pointing at the pictures and laughing. The story has a calm feeling that helped settle him down for sleep.",
+    rating: 5,
+    location: "",
+  },
+];
+
 const Testimonials = ({ testimonials }: { testimonials: Testimonial[] }) => {
   const router = useRouter();
+  const displayTestimonials = [...testimonials, ...hardcodedTestimonials];
+
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -52,7 +73,7 @@ const Testimonials = ({ testimonials }: { testimonials: Testimonial[] }) => {
               Hear from those who&apos;ve transformed their lives
             </p>
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              From Lagos to London, clients around the world share their stories
+              Clients around the world share their stories
               of growth, inspiration, and transformation through coaching and
               creative guidance.
             </p>
@@ -70,7 +91,7 @@ const Testimonials = ({ testimonials }: { testimonials: Testimonial[] }) => {
             transition={{ duration: 0.6 }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {testimonials.map((testimonial, index) => (
+            {displayTestimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
@@ -109,90 +130,7 @@ const Testimonials = ({ testimonials }: { testimonials: Testimonial[] }) => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 mt-10">
-        <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2
-              className={`text-3xl lg:text-4xl font-bold text-[#800000] mb-6 ${oswald.className}`}
-            >
-              Trusted Globally
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join hundreds of clients who have transformed their lives through
-              coaching, writing guidance, and community support.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <div
-                className={`text-4xl lg:text-5xl font-bold text-[#800000] mb-2 ${oswald.className}`}
-              >
-                100%
-              </div>
-              <p className="text-lg text-gray-600">5-Star Reviews</p>
-            </motion.div>
-
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div
-                className={`text-4xl lg:text-5xl font-bold text-[#800000] mb-2 ${oswald.className}`}
-              >
-                10+
-              </div>
-              <p className="text-lg text-gray-600">Countries Served</p>
-            </motion.div>
-
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <div
-                className={`text-4xl lg:text-5xl font-bold text-[#800000] mb-2 ${oswald.className}`}
-              >
-                500+
-              </div>
-              <p className="text-lg text-gray-600">Lives Transformed</p>
-            </motion.div>
-
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <div
-                className={`text-4xl lg:text-5xl font-bold text-[#800000] mb-2 ${oswald.className}`}
-              >
-                5+
-              </div>
-              <p className="text-lg text-gray-600">Years of Service</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* Call to Action */}
       <section className="py-20 bg-[#800000] text-white">

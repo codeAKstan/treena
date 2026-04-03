@@ -16,9 +16,9 @@ interface WhoIAmProps {
 }
 
 const WhoIAm = ({
-  title = "Who I Am",
-  description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cum officiis officia, aspernatur deleniti velit vitae facilis, provident labore debitis, quidem dignissimos eius. Animi est molestiae dolor. Odio, aperiam commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cum officiis officia, aspernatur deleniti velit vitae facilis, provident labore debitis, quidem dignissimos eius. Animi est molestiae dolor. Odio, aperiam commodi?",
-  image = "/images/IMG_20240828_162619[1].jpg",
+  title = "Meet the Author",
+  description = "Treena’s journey into children’s literature started with photography. She learned to capture moments and reveal what others might overlook. That ability now shapes her writing. Rather than using heavy narration, she creates scenes that children can enter with ease. \n  \n Treena sees children’s books as more than entertainment. They nurture imagination, creativity, and a love of reading. Her stories rely on clear language and vivid imagery so children can follow along while still feeling surprised. Inspiration doesn’t require complex words.",
+  image = "/images/treena2.jpg",
 }: WhoIAmProps) => {
   return (
     <div className="max-w-2xl lg:max-w-3xl 2xl:max-w-4xl w-full mx-auto grid md:grid-cols-2 gap-4 p-2 relative max-lg:overflow-clip">

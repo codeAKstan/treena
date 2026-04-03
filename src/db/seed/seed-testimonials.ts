@@ -80,6 +80,20 @@ const testimonialsData = [
     rating: 5,
     work: "Author of The Sickle And The Crown",
   },
+  {
+    name: "Hannah Collins",
+    location: null,
+    quote:
+      "This feels like the kind of book I would have loved as a child. Simple story, gentle message, nothing complicated. Just makes you smile.",
+    rating: 5,
+  },
+  {
+    name: "Daniel Perez",
+    location: null,
+    quote:
+      "I read this to my son before bedtime. He kept pointing at the pictures and laughing. The story has a calm feeling that helped settle him down for sleep.",
+    rating: 5,
+  },
 ];
 
 async function seedTestimonials() {

@@ -6,7 +6,8 @@ import Featured from "@/components/home/featured";
 import Purpose from "@/components/home/purpose";
 import React from "react";
 import Community from "@/components/home/community";
-import ChampionshipAnnouncement from "@/components/home/championship-announcement";
+// import ChampionshipAnnouncement from "@/components/home/championship-announcement";
+import Testimonials from "@/components/testimonials";
 
 const HomeContent = ({
   heroData,
@@ -53,7 +54,7 @@ const HomeContent = ({
         description={whoIAmData.description}
         image={whoIAmData.image}
       />
-      <ChampionshipAnnouncement />
+      {/* <ChampionshipAnnouncement /> */}
       <Featured
         title={featuredData.title}
         quote={featuredData.quote}
@@ -61,6 +62,18 @@ const HomeContent = ({
         image1={featuredData.image1}
         image2={featuredData.image2}
         reviews={featuredBookReviews || []}
+      />
+      <Testimonials
+        testimonials={
+          (featuredBookReviews || []).map((review) => ({
+            id: review.id,
+            name: review.reviewerName,
+            quote: review.content,
+            rating: review.rating,
+            location: null,
+            work: null,
+          }))
+        }
       />
       <Purpose
         title={purposeData.title}
