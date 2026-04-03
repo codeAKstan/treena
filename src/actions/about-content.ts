@@ -6,6 +6,7 @@ import { eq, and } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
 export async function getAboutContent() {
+  if (!process.env.DATABASE_URL) return {};
   try {
     const content = await db.select().from(aboutContent);
 
@@ -26,6 +27,7 @@ export async function getAboutContent() {
 }
 
 export async function getAboutSection(section: string) {
+  if (!process.env.DATABASE_URL) return {};
   try {
     const content = await db
       .select()
@@ -51,6 +53,7 @@ export async function updateAboutContent(
   value: string,
   valueType: string = "text"
 ) {
+  if (!process.env.DATABASE_URL) return { success: false, error: "Database not configured" };
   try {
     const existing = await db
       .select()
@@ -92,6 +95,7 @@ export async function bulkUpdateAboutContent(
     valueType?: string;
   }>
 ) {
+  if (!process.env.DATABASE_URL) return { success: false, error: "Database not configured" };
   try {
     for (const update of updates) {
       await updateAboutContent(

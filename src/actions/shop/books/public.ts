@@ -9,6 +9,7 @@ export const getPublicBooksWithVariants = async (
   page: number = 1,
   limit: number = 10
 ) => {
+  if (!process.env.DATABASE_URL) return { books: [], pagination: { page: 1, limit: 10, totalBooks: 0, totalPages: 0, hasNext: false, hasPrev: false } };
   try {
     const offset = (page - 1) * limit;
 
@@ -104,6 +105,7 @@ export const getPublicBooksWithVariants = async (
 };
 
 export const getPublicFeaturedBooks = async () => {
+  if (!process.env.DATABASE_URL) return { books: [] };
   try {
     const books = await db
       .select()
@@ -174,6 +176,7 @@ export const getPublicFeaturedBooks = async () => {
 };
 
 export const getPublicBookBySlug = async (slug: string) => {
+  if (!process.env.DATABASE_URL) return { error: "Not configured", message: "Database not configured." };
   try {
     const bookData = await db
       .select()
@@ -223,6 +226,7 @@ export const getPublicBookBySlug = async (slug: string) => {
 };
 
 export const getBookBySlug = async (slug: string) => {
+  if (!process.env.DATABASE_URL) return { error: "Not configured", message: "Database not configured." };
   try {
     const bookData = await db
       .select()
@@ -280,6 +284,7 @@ export const getBookBySlug = async (slug: string) => {
 };
 
 export const getPublicBookReviews = async (baseBookId: string) => {
+  if (!process.env.DATABASE_URL) return { reviews: [] };
   try {
     const reviews = await db
       .select()
@@ -308,6 +313,7 @@ export const getPublicBookReviews = async (baseBookId: string) => {
 };
 
 export const getPublicBookReviewStats = async (baseBookId: string) => {
+  if (!process.env.DATABASE_URL) return { count: 0, averageRating: 0 };
   try {
     const reviews = await db
       .select()
@@ -344,6 +350,7 @@ export const getPublicBookReviewStats = async (baseBookId: string) => {
 
 export const getHomePageReviews = async () => {
   // console.log("getHomePageReviews");
+  if (!process.env.DATABASE_URL) return { reviews: [] };
   try {
     const homeReviews = await db
       .select()
