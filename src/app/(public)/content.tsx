@@ -8,6 +8,7 @@ import React from "react";
 import Community from "@/components/home/community";
 // import ChampionshipAnnouncement from "@/components/home/championship-announcement";
 import Testimonials from "@/components/testimonials";
+import Trademarks from "@/components/home/trademarks";
 
 const HomeContent = ({
   heroData,
@@ -82,6 +83,7 @@ const HomeContent = ({
         paragraph3={purposeData.paragraph3}
       />
       <Community />
+      <Trademarks />
     </>
   );
 };
